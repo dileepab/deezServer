@@ -18,6 +18,8 @@ app.start = function() {
       var explorerPath = app.get('loopback-component-explorer').mountPath;
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
+
+    console.log('$OPENSHIFT_MONGODB_DB_HOST');
   });
   return server;
 };
