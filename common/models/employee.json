@@ -1,0 +1,84 @@
+{
+  "name": "Employee",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": {
+      "required": false
+    },
+    "Stats": [
+      {
+        "method": "stats",
+        "endpoint": "/stats",
+        "description": "Statistical information for Employe registers.",
+        "type": "model",
+        "count": {
+          "on": "createdAt",
+          "by": "index"
+        }
+      }
+    ]
+  },
+  "properties": {
+    "initials": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "nic": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "string"
+    },
+    "joinDate": {
+      "type": "date"
+    },
+    "email": {
+      "type": "date",
+      "required": false
+    },
+    "resignDate": {
+      "type": "date"
+    },
+    "salary": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "contactNo": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "attendances": {
+      "type": "hasMany",
+      "model": "Attendance"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
