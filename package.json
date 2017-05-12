@@ -6,11 +6,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "lint": "eslint .",
-    "setup": "NODE_ENV=production && node server/server.js",
-    "posttest": "npm run lint && nsp check",
-    "test": "NODE_ENV=testing npm run start",
-    "start": "NODE_ENV=production && node server/server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@mean-expert/boot-script": "^1.0.0",
