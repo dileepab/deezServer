@@ -6,7 +6,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node server/server.js"
   },
   "dependencies": {
     "@mean-expert/boot-script": "^1.0.0",
