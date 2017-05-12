@@ -2,5 +2,14 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mongodb": {
+    "host": "ds135790.mlab.com",
+    "port": 35790,
+    "database": "garmentapp",
+    "username": "dileepa",
+    "password": "password",
+    "name": "mongoDs",
+    "connector": "mongodb"
   }
 }
