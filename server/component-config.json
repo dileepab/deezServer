@@ -3,7 +3,17 @@
     "mountPath": "/explorer"
   },
   "@mean-expert/loopback-component-realtime": {
+    "debug": false,
     "auth": true,
-    "debug": false
+    "driver": {
+      "name": "socket.io",
+      "options": {}
+    },
+    "modules": [
+      "IO",
+      "PubSub",
+      "FireLoop",
+      "WebRTCSignaler"
+    ]
   }
 }

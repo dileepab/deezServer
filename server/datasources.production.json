@@ -7,8 +7,8 @@
     "host": "172.30.214.23",
     "port": 27017,
     "database": "deezdb",
-    "username": "",
-    "password": "",
+    "username": "userQ23",
+    "password": "oA0eu6JyImrDLtL2",
     "name": "mongodb",
     "connector": "mongodb"
   }
