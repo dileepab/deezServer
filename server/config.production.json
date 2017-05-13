@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "http://deez-deez.1d35.starter-us-east-1.openshiftapps.com/",
+  "host": "http://deez-deez.1d35.starter-us-east-1.openshiftapps.com",
   "port": 8080,
   "remoting": {
     "context": false,
