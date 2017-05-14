@@ -9,7 +9,7 @@
     "database": "garmentapp",
     "username": "dileepa",
     "password": "password",
-    "name": "mongoDs",
+    "name": "mongodb",
     "connector": "mongodb"
   }
 }

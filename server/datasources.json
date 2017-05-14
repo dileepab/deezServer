@@ -6,7 +6,7 @@
   "mongodb": {
     "host": "localhost",
     "port": 27017,
-    "database": "deezdb",
+    "database": "garmentapp",
     "username": "",
     "password": "",
     "name": "mongodb",
