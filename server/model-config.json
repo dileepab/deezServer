@@ -17,10 +17,11 @@
     ]
   },
   "User": {
-    "dataSource": "mongodb"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
-    "dataSource": "mongodb",
+    "dataSource": "db",
     "public": false
   },
   "ACL": {
@@ -44,7 +45,10 @@
   },
   "AppUser": {
     "dataSource": "mongodb",
-    "public": true
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "Attendance": {
     "dataSource": "mongodb",
@@ -60,6 +64,10 @@
   },
   "OverTime": {
     "dataSource": "mongodb",
+    "public": true
+  },
+  "Email": {
+    "dataSource": "emailDataSource",
     "public": true
   }
 }

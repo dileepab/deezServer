@@ -3,10 +3,22 @@ require('ts-node/register');
 var loopback     = require('loopback');
 var boot         = require('loopback-boot');
 var cookieParser = require('cookie-parser');
+var path = require('path');
+var bodyParser = require('body-parser');
 
 var app = module.exports = loopback();
 
 app.use(cookieParser());
+app.set('json spaces', 2); // format json responses for easier viewing
+
+// configure view handler
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// configure body parser
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(loopback.token());
 
 app.start = function() {
   // start the web server

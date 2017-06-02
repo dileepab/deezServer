@@ -47,7 +47,7 @@
         "params": "$!../dist"
       },
       {
-        "paths": "/login",
+        "paths": ["/addRole","/settings","/auth"],
         "params": "$!../dist"
       },
       {
