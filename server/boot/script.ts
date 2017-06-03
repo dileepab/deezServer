@@ -42,7 +42,7 @@ class Script {
                 }
 
             }
-        )
+        );
 
         AppUser.find({where: {"email": "duhimaya@gmail.com"}},
             (err: any, user: any) => {
