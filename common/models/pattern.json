@@ -1,5 +1,5 @@
 {
-  "name": "OverTime",
+  "name": "pattern",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -13,7 +13,7 @@
       {
         "method": "stats",
         "endpoint": "/stats",
-        "description": "Statistical information for OverTime registers.",
+        "description": "Statistical information for pattern registers.",
         "type": "model",
         "count": {
           "on": "createdAt",
@@ -23,17 +23,28 @@
     ]
   },
   "properties": {
-    "date": {
-      "type": "date",
+    "name": {
+      "type": "string",
       "required": true
     },
-    "startTime": {
-      "type": "date",
-      "required": true
+    "imgLink": {
+      "type": "string"
     },
-    "endTime": {
-      "type": "date",
-      "required": true
+    "imgId": {
+      "type": "string"
+    },
+    "thumbnailLink": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "operations": {
+      "type": "object"
     }
   },
   "validations": [],
@@ -52,10 +63,23 @@
       "property": "*"
     },
     {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "user",
+      "permission": "ALLOW",
+      "property": "*"
+    },
+    {
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "find"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
     }
   ],
   "methods": {}

@@ -13,16 +13,25 @@
     "connector": "mongodb"
   },
   "emailDataSource": {
+    "name": "emailDataSource",
     "connector": "mail",
-    "transports": [{
-      "type": "SMTP",
-      "host": "smtp.gmail.com",
-      "secure": true,
-      "port": 465,
-      "auth": {
-        "user": "deezclothings@gmail.com",
-        "pass": "deezpassword"
+    "transports": [
+      {
+        "type": "SMTP",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "deezclothings@gmail.com",
+          "pass": "deezpassword"
+        }
       }
-    }]
+    ]
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
   }
 }

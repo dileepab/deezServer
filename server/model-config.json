@@ -69,5 +69,21 @@
   "Email": {
     "dataSource": "emailDataSource",
     "public": true
+  },
+  "pattern": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "spWorkingDay": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "ImageFile": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }
