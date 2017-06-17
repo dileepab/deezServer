@@ -37,7 +37,7 @@ class AppUser {
         from: 'noreply@loopback.com',
         subject: 'Thanks for registering.',
         template: path.resolve(__dirname, '../../server/views/verify.ejs'),
-        redirect: '/login',
+        redirect: '/auth/login',
         user: user
       };
 
