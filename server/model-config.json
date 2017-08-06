@@ -85,5 +85,9 @@
   "ImageFile": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "target": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

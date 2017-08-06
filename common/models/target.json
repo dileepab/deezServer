@@ -1,5 +1,5 @@
 {
-  "name": "ImageFile",
+  "name": "target",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -13,7 +13,7 @@
       {
         "method": "stats",
         "endpoint": "/stats",
-        "description": "Statistical information for ImageFile registers.",
+        "description": "Statistical information for target registers.",
         "type": "model",
         "count": {
           "on": "createdAt",
@@ -23,21 +23,22 @@
     ]
   },
   "properties": {
-    "name": {
-      "type": "string"
+    "date": {
+      "type": "date",
+      "index": {"unique": true}
     },
-    "container": {
-      "type": "string"
-    },
-    "type": {
-      "type": "string"
-    },
-    "size": {
-      "type": "number"
+    "target": {
+      "type": "object"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "employee": {
+      "type": "belongsTo",
+      "model": "Employee",
+      "foreignKey": "employeeId"
+    }
+  },
   "acls": [],
   "methods": {}
 }
