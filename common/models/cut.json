@@ -82,6 +82,13 @@
       "property": "*"
     },
     {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "user",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
